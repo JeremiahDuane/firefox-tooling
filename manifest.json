@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "JGage's Firefox Tooling",
+    "version": "1.0",
+  
+    "description": "Custom Firefox tooling by J. Gage",
+  
+    "icons": {
+      "48": "/icons/hal-48.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "jeremiahdgage@outlook.com"
+        }
+    },      
+    "content_scripts": [
+      {
+        "matches": ["*://bitbucket.oreillyauto.com/*", "*://jira.oreillyauto.com/*"],
+        "js": ["/assets/jquery-3.7.1.min.js", "index.js", "/scripts/watch-branches.js", "/scripts/watch-jira.js"]
+      }
+    ]
+  }
+  
